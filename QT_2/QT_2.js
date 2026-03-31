@@ -21,7 +21,22 @@
  */
 
 function moveZeros(arr) {
-    // ✍️ Your code here
+    let pt1 = 0, pt2 = 0;
+    let zerosCount = 0;
+
+    for(pt1 = 0; pt1 < arr.length-1; pt1++){
+        if(arr[pt1] != 0) continue;
+
+        if(pt2 <= pt1) pt2 = pt1 + 1;
+        while(arr[pt2] == 0){
+            pt2++;
+            if(pt2 >= arr.length)
+                return arr;
+        }
+        arr[pt1] = arr[pt2];
+        arr[pt2] = 0;
+    }
+    return arr;
 
 }
 
