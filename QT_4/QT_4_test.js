@@ -5,10 +5,10 @@ const prompt = require('prompt-sync')();
 
 const testCases = [
     ["mon", 13, 2],
-    ["sun", 7, 1],
-    ["sun", 14, 2],
+    ["sun", 7, 2],
+    ["sun", 14, 3],
     ["wed", 10, 1],
-    ["fri", 5, 0]
+    ["fri", 5, 1]
 ];
 
 // ---------- TEST FUNCTION ----------
