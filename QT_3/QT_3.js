@@ -18,7 +18,11 @@
  */
 
 function toggleBits(n) {
-    // ✍️ Your code here
+    let bigMultiple = 2;
+    while(bigMultiple<=n){
+        bigMultiple*=2;
+    }
+    return (bigMultiple-1)-n;
 
 }
 
