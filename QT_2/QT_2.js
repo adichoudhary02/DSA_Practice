@@ -45,12 +45,10 @@ function moveZeros(arr) {
         }
         
     }
-
-    if(insertpos < arr.length){
-        for(let i = insertpos; i<arr.length; i++){
-            arr[i] = 0;
-        }
+    for(let i = insertpos; i<arr.length; i++){
+        arr[i] = 0;
     }
+    
     return arr;
 
 }
