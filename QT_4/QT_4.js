@@ -39,7 +39,6 @@ function countSundays(startDay, n) {
 
     // return sundays;
 
-    let sundays = 0;
     let map = new Map();
     map = {
         'mon': 0,
@@ -53,12 +52,9 @@ function countSundays(startDay, n) {
 
     let dayIndex = map[startDay];
 
-    let remainingDays = n - (6-dayIndex - 1);
-    if(remainingDays > 0) {
-        sundays++;
-        sundays = sundays + Math.floor(remainingDays/7);
-    }
-    return sundays;
+    let offset = 6 - dayIndex;
+
+    return offset >= n? 0: 1 + Math.floor((n - offset -1)/7);
 }
 
 module.exports = { countSundays };
