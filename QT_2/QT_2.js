@@ -21,7 +21,7 @@
  */
 
 function moveZeros(arr) {
-    let pt1 = 0, pt2 = 0;
+    /* let pt1 = 0, pt2 = 0;
     let zerosCount = 0;
 
     for(pt1 = 0; pt1 < arr.length-1; pt1++){
@@ -35,6 +35,21 @@ function moveZeros(arr) {
         }
         arr[pt1] = arr[pt2];
         arr[pt2] = 0;
+    }
+    return arr; */
+    let insertpos = 0;
+    for (let i = 0; i < arr.length; i++){
+        if(arr[i] != 0){
+            arr[insertpos] = arr[i];
+            insertpos++;
+        }
+        
+    }
+
+    if(insertpos < arr.length){
+        for(let i = insertpos; i<arr.length; i++){
+            arr[i] = 0;
+        }
     }
     return arr;
 
