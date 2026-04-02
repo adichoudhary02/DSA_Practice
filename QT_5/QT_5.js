@@ -14,23 +14,23 @@
  */
 
 function sortByRisk(arr) {
-    let low = 0, high = arr.length-1;
+    let low = 0, i = 0, high = arr.length - 1;
 
-    let i = 0;
-    while(i<=high){
-        if(arr[i] == 0){
-            arr[i] = arr[low];
-            arr[low] = 0;
-            ++low;
+    while (i <= high) {
+        if (arr[i] === 0) {
+            [arr[i], arr[low]] = [arr[low], arr[i]];
+            low++;
+            i++;
+        } 
+        else if (arr[i] === 2) {
+            [arr[i], arr[high]] = [arr[high], arr[i]];
+            high--;
+        } 
+        else {
+            i++;
         }
-        else if(arr[i] == 2){
-            arr[i] = arr[high];
-            arr[high] = 2;
-            --high;
-            continue;
-        }
-        i++;
     }
+
     return arr;
 }
 
