@@ -25,3 +25,9 @@ let map = new Map();
         'sat': 5,
         'sun': 6
     }
+
+// to swap items in the js 
+[arr[i], arr[low]] = [arr[low], arr[i]]
+
+for(num in arr); //=>This implies that the num is the strings of the indexs of array
+for(num of arr); //=>This implies that the num is the element itself of the array
