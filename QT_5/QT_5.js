@@ -14,8 +14,24 @@
  */
 
 function sortByRisk(arr) {
-    // ✍️ Your code here
+    let low = 0, high = arr.length-1;
 
+    let i = 0;
+    while(i<=high){
+        if(arr[i] == 0){
+            arr[i] = arr[low];
+            arr[low] = 0;
+            ++low;
+        }
+        else if(arr[i] == 2){
+            arr[i] = arr[high];
+            arr[high] = 2;
+            --high;
+            continue;
+        }
+        i++;
+    }
+    return arr;
 }
 
 module.exports = { sortByRisk };
