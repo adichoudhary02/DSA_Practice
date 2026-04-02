@@ -10,7 +10,14 @@
  */
 
 function productOfDigits(n) {
-    // ✍️ Your code here
+    let product = 1;
+
+    if(n == 0) return 0;
+    while(n>0){
+        product *= n%10;
+        n = Math.floor(n/10);
+    }
+    return product;
 
 }
 
