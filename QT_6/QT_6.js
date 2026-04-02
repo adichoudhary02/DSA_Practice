@@ -13,7 +13,15 @@
  */
 
 function countGreaterThanPrevious(arr) {
-    // ✍️ Your code here
+    let largest = -Infinity;
+    let count = 0;
+    for(num in arr){
+        if(arr[num] > largest){
+            largest = arr[num];
+            count++;
+        }
+    }
+    return count;
 
 }
 
