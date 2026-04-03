@@ -13,9 +13,22 @@
  * Input: N = 99, R = 3
  * Output: 9
  */
+function digitSum(number){
+    let sum = 0;
+    while(number>0){
+        sum = sum + number%10;
+        number = Math.floor(number/10);
+    }
+    return sum;
+}
 
 function mysteriousSum(N, R) {
-    // ✍️ Your code here
+    let finalSum = 0;
+    finalSum = R * digitSum(N);
+    while(finalSum%10 != finalSum){
+        finalSum = digitSum(finalSum);
+    }
+    return finalSum;
 
 }
 
