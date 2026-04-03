@@ -19,6 +19,10 @@ function productOfDigits(n) {
     }
     return product;
 
+    {/*function productOfDigits(n) {
+    return n.toString().split('').reduce((acc, d) => acc * Number(d), 1);
+    }*/}
+
 }
 
 module.exports = { productOfDigits };
