@@ -25,9 +25,8 @@ function digitSum(number){
 function mysteriousSum(N, R) {
     let finalSum = 0;
     finalSum = R * digitSum(N);
-    while(finalSum%10 != finalSum){
-        finalSum = digitSum(finalSum);
-    }
+    if (N === 0) return 0;
+        return 1 + (finalSum - 1) % 9;
     return finalSum;
 
 }
