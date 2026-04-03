@@ -8,14 +8,27 @@
  * 
  * Return the maximum count of 'a' in any substring.
  * 
+ * 
  * Example:
  * Input: "bbbaaababa", L = 3
  * Output: 3
  */
 
 function maxAquaCurtains(str, L) {
-    // ✍️ Your code here
-
+    let maxAs = 0, tempCount = 0;
+    let stringLength = str.length;
+    for(let i = 0; i<stringLength;i++){
+        if(str[i] == 'a'|| str[i] == 'A'){
+            tempCount++;
+        }
+        if((i+1)%L == 0){
+            if(maxAs<tempCount){
+                maxAs = tempCount;
+            }
+            tempCount = 0;
+        }
+    }
+    return maxAs<tempCount? tempCount: maxAs;
 }
 
 module.exports = { maxAquaCurtains };
