@@ -18,10 +18,10 @@ function maxAquaCurtains(str, L) {
     let maxAs = 0, tempCount = 0;
     let stringLength = str.length;
     for(let i = 0; i<stringLength;i++){
-        if(str[i] == 'a'|| str[i] == 'A'){
+        if(str[i] == 'a'){
             tempCount++;
         }
-        if((i+1)%L == 0){
+        if(( i+1 )% L == 0){
             if(maxAs<tempCount){
                 maxAs = tempCount;
             }
