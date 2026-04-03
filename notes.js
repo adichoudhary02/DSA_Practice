@@ -36,3 +36,6 @@ for(num of arr); //=>This implies that the num is the element itself of the arra
 for (let i = 0; i<String.length; i++){
     console.log(string[i]);
 }
+
+//Digital rool = when a numbers digits are added untill a single digit is left, 
+//number % 9 = <'sum of digits'>%9;
