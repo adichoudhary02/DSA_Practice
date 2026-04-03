@@ -31,3 +31,8 @@ let map = new Map();
 
 for(num in arr); //=>This implies that the num is the strings of the indexs of array
 for(num of arr); //=>This implies that the num is the element itself of the array
+
+//String works as an array in js too
+for (let i = 0; i<String.length; i++){
+    console.log(string[i]);
+}
